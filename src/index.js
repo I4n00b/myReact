@@ -9,4 +9,14 @@ import ReactDOM from 'react-dom'//把創建好的元件和虛擬DOM放到畫面�
 //參數2:是一個對象或null，表示當前這個DOM的屬性
 //參數3:子節點(包括其他虛擬DOM獲取本文子節點)
 //參數n:其他子節點
-React.createElement('')
+
+//This is a Big H1
+// const myh1 = React.createElement('h1',{id:'myh1',title:'thsish1'},'THis is a Big H1')
+// const mydiv = React.createElement('div',null,'ths is a div element')
+
+const mydiv = <div id="mydiv" title="div AAA">這是一個DIV元素</div>
+
+//渲染畫面上的DOM結構，最好的方式，就是寫HTML
+//參數1:要渲染的那個虛擬DOM
+//參數2:指定畫面上一個容器
+ReactDOM.render(mydiv,document.getElementById('app'))
